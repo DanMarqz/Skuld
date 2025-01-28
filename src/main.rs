@@ -18,6 +18,11 @@ fn main() {
     work_cycle(work_minutes, rest_minutes, cycles_count);
 
     println!("{}", "You finished your work cycle! Take a break! 🪓".red().bold());
+
+    // Esperar que el usuario presione Enter para cerrar
+    println!("Press Enter to exit...");
+    let mut input = String::new();
+    io::stdin().read_line(&mut input).unwrap();
 }
 
 /// Función que ejecuta los ciclos de trabajo y descanso.
