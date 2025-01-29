@@ -11,6 +11,7 @@ use colored::*;
 fn main() {
     println!("{}", "~~~ Skuld | Pomodoro Timer ~~~".magenta());
 
+
     let work_minutes = set_timer("Enter work time in minutes: ");
     let rest_minutes = set_timer("Enter rest time in minutes: ");
     let cycles_count = set_timer("Enter number of cycles: ");
