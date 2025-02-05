@@ -1,3 +1,5 @@
+mod ui;
+
 use std::{thread, time::Duration};
 use std::io;
 use std::io::Write;
@@ -9,21 +11,23 @@ use colored::*;
 /// - Inicia el ciclo de trabajo llamando a `work_cycle` con los valores ingresados.
 /// - Al final, muestra un mensaje indicando que los ciclos han finalizado.
 fn main() {
-    println!("{}", "~~~ Skuld | Pomodoro Timer ~~~".magenta());
+    // println!("{}", "~~~ Skuld | Pomodoro Timer ~~~".magenta());
+    //
+    //
+    // let work_minutes = set_timer("Enter work time in minutes: ");
+    // let rest_minutes = set_timer("Enter rest time in minutes: ");
+    // let cycles_count = set_timer("Enter number of cycles: ");
+    //
+    // work_cycle(work_minutes, rest_minutes, cycles_count);
+    //
+    // println!("{}", "You finished your work cycle! Take a break! 🪓".red().bold());
+    //
+    // // Esperar que el usuario presione Enter para cerrar
+    // println!("Press Enter to exit...");
+    // let mut input = String::new();
+    // io::stdin().read_line(&mut input).unwrap();
 
-
-    let work_minutes = set_timer("Enter work time in minutes: ");
-    let rest_minutes = set_timer("Enter rest time in minutes: ");
-    let cycles_count = set_timer("Enter number of cycles: ");
-
-    work_cycle(work_minutes, rest_minutes, cycles_count);
-
-    println!("{}", "You finished your work cycle! Take a break! 🪓".red().bold());
-
-    // Esperar que el usuario presione Enter para cerrar
-    println!("Press Enter to exit...");
-    let mut input = String::new();
-    io::stdin().read_line(&mut input).unwrap();
+    ui::run_window();
 }
 
 /// Función que ejecuta los ciclos de trabajo y descanso.
